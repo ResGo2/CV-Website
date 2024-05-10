@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cv.css">
+    <script src="cv.js"></script>
+    <title>Resego Potfolio</title>
+    <script src="https://kit.fontawesome.com/4737328728.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">Resego</h1>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact </a></li>
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-ellipsis-vertical" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer</p>
+                <h2>Hello, I'm <span>Resego</span></h2>
+            </div>
+        </div>
+    </header>
+
+    <!-----about------>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col1">
+                        <img src="content/about.jpeg" alt="">
+                    </div>
+                    <div class="about-col2">
+                        <h1 class="subtitle">About Me</h1>
+                        <p>3rd year student at the Belgium Campus iTversity currently 
+                            working towards my Bachelor of Computing 
+                            specializing in Software Engineer. Excellent in problem solving
+                            and communication, demonstrating adaptability to diverse environments. 
+                            Able to adapt and work well under any circumstances.
+                        </p>
+                        <div class="tabtitle">
+                            <p class="tablinks activelink" onclick="opentab('skills')">Skills</p>
+                            <p class="tablinks" onclick="opentab('experience')">Experience</p>
+                            <p class="tablinks" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tabcontent activetab" id="skills">
+                            <ul>
+                                <li><span>Database Development</span><br>SQL</li>
+                                <li><span>Web Development</span><br>HTML CSS JS</li>
+                                <li><span>App Development</span><br>C# DEVELOPER</li>
+                            </ul>
+                        </div>
+                        <div class="tabcontent" id="experience">
+                            <ul>
+                                <li><span>Oct 2023 - Current</span><br>Brand Ambassador at Huawei ICT Academy </li>
+                            </ul>
+                        </div>
+                        <div class="tabcontent" id="education">
+                            <ul>
+                                <li><span>March 2021 - Current</span><br>Belgium Campus iTversirty</li>
+                                <li><span>Jan 2015 - Dec 2019</span><br>Hoerskool Gerrit Maritz</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-----projects------>
+
+    <div id="projects">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="projectlist">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Design</h2>
+                        <p>Login based application<br></p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-database"></i>
+                        <h2>Database Development</h2>
+                        <p>Login based application<br></p>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store-ios"></i>
+                        <h2>Applictaions</h2>
+                        <p>Student Managment Application<br>
+                        <li>Add new student</li>
+                        <li>Remove existing student </li>
+                        <li>Edit info for existing student </li>
+                        <li>Search for a student</li>
+                        <li>Display all student</li>
+                        <li>Exit the applictaion</li>
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-----contact------>
+    <div id="contact">
+        <div class="container">
+            <h1 class="subtitle">Contact Me</h1>
+            <div class="contacts">
+                <p><i class="fa-regular fa-envelope"></i><a href="mailto:resego.letsholo@icloud.com">resego.letsholo@icloud.com</a></p>
+                <p><i class="fa-solid fa-phone"></i><a href="tel:+27728377394">0728377394</a></p>
+                <div class="socialicons">
+                    <a href="https://www.linkedin.com/in/resego-letsholo-6197b5238"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="/content/Resego_CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tablinks");
+        var tabcontents = document.getElementsByClassName("tabcontent");
+        var sidemenus = document.getElementsById("sidemenu");
+
+        function opentab(tabname) {
+            for (tablink of tablinks){
+            tablink.classList.remove("activelink");
+            }
+            for (tabcontent of tabcontents){
+            tabcontent.classList.remove("activetab");
+        }
+            event.currentTarget.classList.add("activelink");
+            document.getElementById(tabname).classList.add("activetab");
+        }
+
+        function openmenu() {
+            sidemenus.style.display = "0";
+
+        }
+        function closemenu() {
+            sidemenus.style.display = "-200px";
+        }
+    </script>
+   
+</body>
+</html>
